@@ -21,38 +21,38 @@
     </div>
 
     <div class="row center-block" id="tipoCuenta">
-      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" id="estudiante">
+      <div class="col-md-4" id="estudiante">
         <img src="img/man.png" id="man" class="img-responsive center-block" alt="Responsive Image"><br/>
-        <button type="submit" class = "btn btn-danger" role = "button">Estudiante</button><br /><br />
+        <button type="submit" onclick="activarEstudiante()" class = "btn btn-danger" role = "button">Estudiante</button><br /><br />
       </div>
 
-      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" id="profesor">
+      <div class="col-md-4" id="profesor">
         <img src="img/teacher.png" id="teacher" class="img-responsive center-block" alt="Responsive Image"><br/>
-        <button type="submit" class = "btn btn-danger" role = "button">Profesor</button><br /><br />
+        <button type="submit" onclick="activarProfesro()" class = "btn btn-danger" role = "button">Profesor</button><br /><br />
       </div>
 
-      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" id="empresa">
+      <div class="col-md-" id="empresa">
         <img src="img/team.png" id="team" class="img-responsive center-block" alt="Responsive Image"><br/>
-        <button type="submit" class = "btn btn-danger" role = "button">Empresa</button><br /><br />
+        <button type="submit" onclick="activarEmpresa()" class = "btn btn-danger" role = "button">Empresa</button><br /><br />
       </div>
     </div>
 
-    <div class="row center-block" id="datos">
-      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" id="columna1">
-      Nombre: <input type="text" name="nombre" id="nombre"></input></br></br>
-      Apellido: <input type="text" name="apellido" id="apellido"></input></br></br>
-      Nombre de Empresa: <input type="text" name="nombreEmpresa" id="nombreEmpresa"></input></br></br>
-      Nombre de Usuario: <input type="text" name="nombreUsuario" id="nombreUsuario"></input></br></br>
-      Contraseña: <input type="password" name="contrasenia" id="contrasenia"></input></br></br>
-      Reintroducir Contraseña: <input type="password" name="contrasenia2" id="contrasenia2"></input></br></br>
-      Carne: <input type="text" name="carne" id="carne"></input></br></br>
-      Teléfono: <input type="text" name="telefono" id="telefono"></input></br></br>
-      Correo Electrónio: <input type="email" name="correo" id="correo"></input></br></br>
-      Horas de Atención: <input type="text" name="horasAtencion" id="horasAtencion"></input></br></br>
+    <div class="row center-block" id="datos" name="datos">
+      <div class="col-md-3 col-md-offset-3 datosP" id="columna1" name="columna1">
+      Nombre:</br><input type="text" name="nombre" id="nombre" disabled></input></br></br>
+      Apellido:</br><input type="text" name="apellido" id="apellido" disabled></input></br></br>
+      Nombre de Empresa:</br><input type="text" name="nombreEmpresa" id="nombreEmpresa" disabled></input></br></br>
+      Nombre de Usuario:</br><input type="text" name="nombreUsuario" id="nombreUsuario" disabled></input></br></br>
+      Contraseña:</br><input type="password" name="contrasenia" id="contrasenia" disabled></input></br></br>
+      Reintroducir Contraseña:<input type="password" name="contrasenia2" id="contrasenia2"disabled></input></br></br>
+      Carne:</br><input type="text" name="carne" id="carne"disabled></input></br></br>
+      Teléfono:</br><input type="text" name="telefono" id="telefono"disabled></input></br></br>
+      Correo Electrónio:<input type="email" name="correo" id="correo"disabled></input></br></br>
+      Horas de Atención:<input type="text" name="horasAtencion" id="horasAtencion"disabled></input></br></br>
 
       <div class="form-group">
         <label for="listaPais">País de Recidencia</label>
-        <select class="form-control" id="listaPais">
+        <select class="form-control" id="listaPais" disabled>
           <option>Selecciones una país...</option>
           <option>Costa Rica</option>
           <option>Estados Unidos</option>
@@ -64,7 +64,7 @@
 
       <div class="form-group">
         <label for="listaU">Universidad</label>
-        <select class="form-control" id="listaU">
+        <select class="form-control" id="listaU" disabled>
           <option>Selecciones una universidad...</option>
           <option>TEC</option>
           <option>UNA</option>
@@ -76,7 +76,7 @@
 
       <div class="form-group">
         <label for="listaU">Repositorio</label>
-        <select class="form-control" id="listaU">
+        <select class="form-control" id="listaU" disabled>
           <option>Selecciones un repositorio...</option>
           <option>Google Drive</option>
           <option>Dropbox</option>
@@ -84,25 +84,25 @@
       </div>
     </div>
 
-      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" id="columna1">
-        Link a hoja de vida: <input type="text" name="hoja" id="hoja"></input></br></br>
-        Sitio Web de la Empresa: <input type="text" name="webEmpresa" id="webEmpresa"></input></br></br>
-        Selecciones imagen de perfil: <input id="foto" name="foto" type="file" role="button" class="filestyle" multiple class="file-loading"></br></br>
-        <img src="img/avatar.png" id="fotoPerfil" class="img-responsive img-thumbnail center-block" alt="Responsive Image"><br/>
-        <div class="well" style="max-height: 300px;overflow: auto;">
-        		Lista de Tecnologías:<ul class="list-group checked-list-box">
-                  <li class="list-group-item">Cras justo odio</li>
-                  <li class="list-group-item" data-checked="true">Dapibus ac facilisis in</li>
-                  <li class="list-group-item">Morbi leo risus</li>
-                  <li class="list-group-item">Porta ac consectetur ac</li>
-                  <li class="list-group-item">Vestibulum at eros</li>
-                  <li class="list-group-item">Cras justo odio</li>
-                  <li class="list-group-item">Dapibus ac facilisis in</li>
-                  <li class="list-group-item">Morbi leo risus</li>
-                  <li class="list-group-item">Porta ac consectetur ac</li>
-                  <li class="list-group-item">Vestibulum at eros</li>
-                </ul>
-            </div>
+    <div class="col-md-3" id="columna2">
+      Link a hoja de vida: <input type="text" name="hoja" id="hoja" disabled></input></br></br>
+      Sitio Web de la Empresa: <input type="text" name="webEmpresa" id="webEmpresa" disabled></input></br></br>
+      Selecciones imagen de perfil: <input id="foto" name="foto" type="file" role="button" class="filestyle" multiple class="file-loading" disabled></br></br>
+      <img src="img/avatar.png" id="fotoPerfil" class="img-responsive img-thumbnail center-block" alt="Responsive Image"><br/>
+      <div class="well" style="max-height: 300px;overflow: auto;">
+        	Lista de Tecnologías:<ul class="list-group checked-list-box">
+                <li class="list-group-item">Cras justo odio</li>
+                <li class="list-group-item" data-checked="true">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Morbi leo risus</li>
+                <li class="list-group-item">Porta ac consectetur ac</li>
+                <li class="list-group-item">Vestibulum at eros</li>
+                <li class="list-group-item">Cras justo odio</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Morbi leo risus</li>
+                <li class="list-group-item">Porta ac consectetur ac</li>
+                <li class="list-group-item">Vestibulum at eros</li>
+              </ul>
+          </div>
       </div>
 
     </div>
@@ -111,15 +111,15 @@
       <ul class="list-group checked-list-box">
         <li class="list-group-item">Acepto términos y condiciones</li>
       </ul>
-      <button type="submit" class = "btn btn-danger" role = "button">Cancelar</button>
-      <button type="submit" class = "btn btn-danger" role = "button">Continuar</button><br /><br />
+      <button type="submit" onclick="cancelar()" class = "btn btn-danger" role = "button">Cancelar</button>
+      <button type="submit" class = "btn btn-danger" role = "button"disabled>Continuar</button><br /><br />
       <br /><br /><br /><br /><br /><br /><br /><br />
 
     </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <script src="js/register.js"></script>
+  <script src="js/register.js"></s  cript>
   <script src="js/bootstrap-filestyle.min.js"> </script>
 
 </body>

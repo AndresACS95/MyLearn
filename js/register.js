@@ -76,3 +76,20 @@ $(function () {
         $('#display-json').html(JSON.stringify(checkedItems, null, '\t'));
     });
 });
+
+function activarEstudiante(){
+  document.container.datos.nombre.enable;
+  alert("activarEstudiante");
+}
+
+function activarProfesor(){
+
+}
+
+function activarEmpresa(){
+
+}
+
+function cancelar(){
+  document.location.href = "index.html";
+}
