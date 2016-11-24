@@ -44,6 +44,12 @@
   text-align: center;
 }
 .page-header{
+  text-align: left;;
+}
+.page-header h5{
+  text-align: center;
+}
+.botones{
   text-align: center;
 }
 .state-icon {
@@ -66,6 +72,10 @@
   margin: 0 auto 50px;
   padding: 30px;
   text-align: center;
+}
+.progress{
+  max-width: 70px;
+  float: none;
 }
 body {
   background: #F2F2F2;
