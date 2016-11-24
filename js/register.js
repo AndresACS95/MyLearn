@@ -78,18 +78,80 @@ $(function () {
 });
 
 function activarEstudiante(){
-  document.container.datos.nombre.enable;
-  alert("activarEstudiante");
+  document.getElementById("nombre").disabled = false;
+  document.getElementById("apellido").disabled = false;
+  document.getElementById("nombreUsuario").disabled = false;
+  document.getElementById("contrasenia").disabled = false;
+  document.getElementById("contrasenia2").disabled = false;
+  document.getElementById("carne").disabled = false;
+  document.getElementById("telefono").disabled = false;
+  document.getElementById("listaU").disabled = false;
+  document.getElementById("listaPais").disabled = false;
+  document.getElementById("listaRepo").disabled = false;
+  document.getElementById("correo").disabled = false;
+  document.getElementById("hoja").disabled = false;
+  document.getElementById("foto").disabled = false;
+  document.getElementById("horasAtencion").disabled = true;
+  document.getElementById("nombreEmpresa").disabled = true;
+  document.getElementById("webEmpresa").disabled = true;
 }
 
 function activarProfesor(){
-
+  document.getElementById("nombre").disabled = false;
+  document.getElementById("apellido").disabled = false;
+  document.getElementById("nombreUsuario").disabled = false;
+  document.getElementById("contrasenia").disabled = false;
+  document.getElementById("contrasenia2").disabled = false;
+  document.getElementById("carne").disabled = false;
+  document.getElementById("telefono").disabled = false;
+  document.getElementById("listaU").disabled = false;
+  document.getElementById("listaPais").disabled = false;
+  document.getElementById("listaRepo").disabled = false;
+  document.getElementById("correo").disabled = false;
+  document.getElementById("hoja").disabled = false;
+  document.getElementById("foto").disabled = false;
+  document.getElementById("horasAtencion").disabled = false;
+  document.getElementById("nombreEmpresa").disabled = true;
+  document.getElementById("webEmpresa").disabled = true;
 }
 
 function activarEmpresa(){
+  document.getElementById("nombre").disabled = false;
+  document.getElementById("apellido").disabled = false;
+  document.getElementById("nombreUsuario").disabled = false;
+  document.getElementById("contrasenia").disabled = false;
+  document.getElementById("contrasenia2").disabled = false;
+  document.getElementById("carne").disabled = true;
+  document.getElementById("telefono").disabled = false;
+  document.getElementById("listaU").disabled = true;
+  document.getElementById("listaPais").disabled = false;
+  document.getElementById("listaRepo").disabled = false;
+  document.getElementById("correo").disabled = false;
+  document.getElementById("hoja").disabled = false;
+  document.getElementById("foto").disabled = false;
+  document.getElementById("horasAtencion").disabled = true;
+  document.getElementById("nombreEmpresa").disabled = false;
+  document.getElementById("webEmpresa").disabled = false;
+}
 
+function check(){
+    var estadoActual = document.getElementById("botonContinuar");
+
+
+    if(estadoActual.disabled)
+    {
+        estadoActual.disabled= false;
+    }
+    else
+    {
+        estadoActual.disabled= true;
+    }
 }
 
 function cancelar(){
   document.location.href = "index.html";
+}
+
+function registrar(){
+  document.location.href = "perfil.html";
 }
