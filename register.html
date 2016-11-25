@@ -33,37 +33,37 @@
 
     <div class="row center-block" id="tipoCuenta">
       <div class="col-md-4" id="estudiante">
-        <img src="img/man.png" id="man" class="img-responsive center-block" alt="Responsive Image"><br/>
+        <img src="img/man.png" id="man" onclick="activarEstudiante()" class="img-responsive center-block" alt="Responsive Image"><br/>
         <button type="submit" onclick="activarEstudiante()" class = "btn btn-danger" role = "button">Estudiante</button><br /><br />
       </div>
 
       <div class="col-md-4" id="profesor">
-        <img src="img/teacher.png" id="teacher" class="img-responsive center-block" alt="Responsive Image"><br/>
+        <img src="img/teacher.png" id="teacher" onclick="activarProfesor()"class="img-responsive center-block" alt="Responsive Image"><br/>
         <button type="submit" onclick="activarProfesor()" class = "btn btn-danger" role = "button">Profesor</button><br /><br />
       </div>
 
       <div class="col-md-" id="empresa">
-        <img src="img/team.png" id="team" class="img-responsive center-block" alt="Responsive Image"><br/>
+        <img src="img/team.png" id="team" onclick="activarEmpresa()" class="img-responsive center-block" alt="Responsive Image"><br/>
         <button type="submit" onclick="activarEmpresa()" class = "btn btn-danger" role = "button">Empresa</button><br /><br />
       </div>
     </div>
 
     <div class="row center-block" id="datos" name="datos">
       <div class="col-md-3 col-md-offset-3 datosP" id="columna1" name="columna1">
-        Nombre:</br><input type="text" name="nombre" id="nombre" disabled></input></br></br>
-        Apellido:</br><input type="text" name="apellido" id="apellido" disabled></input></br></br>
-        Nombre de Empresa:</br><input type="text" name="nombreEmpresa" id="nombreEmpresa" disabled></input></br></br>
-        Nombre de Usuario:</br><input type="text" name="nombreUsuario" id="nombreUsuario" disabled></input></br></br>
-        Contraseña:</br><input type="password" name="contrasenia" id="contrasenia" disabled></input></br></br>
-        Reintroducir Contraseña:<input type="password" name="contrasenia2" id="contrasenia2"disabled></input></br></br>
-        Carne:</br><input type="text" name="carne" id="carne"disabled></input></br></br>
-        Teléfono:</br><input type="text" name="telefono" id="telefono"disabled></input></br></br>
-        Correo Electrónio:<input type="email" name="correo" id="correo"disabled></input></br></br>
-        Horas de Atención:<input type="text" name="horasAtencion" id="horasAtencion"disabled></input></br></br>
+        Nombre:</br><input type="text" name="nombre" id="nombre" disabled required></input></br></br>
+        Apellido:</br><input type="text" name="apellido" id="apellido" disabled required></input></br></br>
+        Nombre de Empresa:</br><input type="text" name="nombreEmpresa" id="nombreEmpresa" disabled required></input></br></br>
+        Nombre de Usuario:</br><input type="text" name="nombreUsuario" id="nombreUsuario" disabled required></input></br></br>
+        Contraseña:</br><input type="password" name="contrasenia" id="contrasenia" disabled required></input></br></br>
+        Reintroducir Contraseña:<input type="password" name="contrasenia2" id="contrasenia2"disabled required></input></br></br>
+        Carne:</br><input type="text" name="carne" id="carne"disabled required></input></br></br>
+        Teléfono:</br><input type="text" name="telefono" id="telefono"disabled required></input></br></br>
+        Correo Electrónio:<input type="email" name="correo" id="correo"disabled required></input></br></br>
+        Horas de Atención:<input type="text" name="horasAtencion" id="horasAtencion"disabled required></input></br></br>
 
         <div class="form-group">
           <label for="listaPais">País de Recidencia</label>
-          <select class="form-control" name="listaPais" id="listaPais" disabled>
+          <select class="form-control" name="listaPais" id="listaPais" disabled required>
             <option>Selecciones una país...</option>
             <option>Costa Rica</option>
             <option>Estados Unidos</option>
@@ -75,7 +75,7 @@
 
         <div class="form-group">
           <label for="listaU">Universidad</label>
-          <select class="form-control" name="listaU" id="listaU" disabled>
+          <select class="form-control" name="listaU" id="listaU" disabled required>
             <option>Selecciones una universidad...</option>
             <option>TEC</option>
             <option>UNA</option>
@@ -87,7 +87,7 @@
 
         <div class="form-group">
           <label for="listaU">Repositorio</label>
-          <select class="form-control" name="listaRepo" id="listaRepo" disabled>
+          <select class="form-control" name="listaRepo" id="listaRepo" disabled required>
             <option>Selecciones un repositorio...</option>
             <option>Google Drive</option>
             <option>Dropbox</option>
@@ -97,8 +97,8 @@
 
       <div class="col-md-3" id="columna2">
         Link a hoja de vida: <input type="text" name="hoja" id="hoja" disabled></input></br></br>
-        Sitio Web de la Empresa: <input type="text" name="webEmpresa" id="webEmpresa" disabled></input></br></br>
-        Selecciones imagen de perfil: <input id="foto" name="foto" name="foto" type="file" role="button" class="filestyle" multiple class="file-loading" disabled></br></br>
+        Sitio Web de la Empresa: <input type="text" name="webEmpresa" id="webEmpresa" disabled required></input></br></br>
+        Selecciones imagen de perfil: <input id="foto" name="foto" name="foto" type="file" role="button" class="filestyle" multiple class="file-loading" disabled required></br></br>
         <img src="img/avatar.png" id="fotoPerfil" class="img-responsive img-thumbnail center-block" alt="Responsive Image"><br/>
         <div class="well" style="max-height: 300px;overflow: auto;">
         	Lista de Tecnologías:<ul class="list-group checked-list-box">
