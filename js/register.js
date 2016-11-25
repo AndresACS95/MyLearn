@@ -108,7 +108,7 @@ function activarProfesor(){
   document.getElementById("listaPais").disabled = false;
   document.getElementById("listaRepo").disabled = false;
   document.getElementById("correo").disabled = false;
-  document.getElementById("hoja").disabled = false;
+  document.getElementById("hoja").disabled = true;
   document.getElementById("foto").disabled = false;
   document.getElementById("horasAtencion").disabled = false;
   document.getElementById("nombreEmpresa").disabled = true;
@@ -127,7 +127,7 @@ function activarEmpresa(){
   document.getElementById("listaPais").disabled = false;
   document.getElementById("listaRepo").disabled = false;
   document.getElementById("correo").disabled = false;
-  document.getElementById("hoja").disabled = false;
+  document.getElementById("hoja").disabled = true;
   document.getElementById("foto").disabled = false;
   document.getElementById("horasAtencion").disabled = true;
   document.getElementById("nombreEmpresa").disabled = false;
@@ -153,5 +153,5 @@ function cancelar(){
 }
 
 function registrar(){
-  document.location.href = "perfil.html";
+  document.location.href = "perfilEstudiante.html";
 }
