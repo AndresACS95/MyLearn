@@ -155,3 +155,32 @@ function cancelar(){
 function registrar(){
   document.location.href = "perfilEstudiante.html";
 }
+<<<<<<< Updated upstream
+=======
+
+//GET de los universidades
+$.ajax({
+  type: "GET",
+  url: "webservices/newOrder.php",
+  dataType: 'json',
+  success: function(data){
+    var obj = JSON.parse(data);
+    $.each(obj,function(index,element){
+      var ingredient_type = element.type;
+      var ul_name = "";
+      switch (ingredient_type) {
+        case '0':
+          ul_name = "#list_helados";
+          break;
+        case '1':
+          ul_name = "#list_topping";
+          break;
+        case '2':
+          ul_name = "#list_adicional";
+          break;
+      }
+      $(ul_name).append('<li class="IngredientsItem"><div class="form-group"><div class="checkbox"><label><input type="checkbox" id="'+element.name+ingredient_type+'"><img class="ingredient_image" src="'+element.image+'"/></label></div><center><strong>'+element.name+'</strong></center><div class="radio '+element.name+ingredient_type+'"><label class="radio"><input class="calc" type="radio" name="'+element.name+ingredient_type+'" id="'+element.name+ingredient_type+'P" text="Poco" value="'+(parseInt(element.price,10))/2+'" disabled>Poco - ₡'+(parseInt(element.price,10))/2+'</label><label class="radio"><input class="calc" type="radio" name="'+element.name+ingredient_type+'" id="'+element.name+ingredient_type+'R" text="Regular" value="'+element.price+'" disabled>Regular - ₡'+element.price+'</label><label class="radio"><input class="calc" type="radio" name="'+element.name+ingredient_type+'" id="'+element.name+ingredient_type+'M" text="Mucho" value="'+(parseInt(element.price,10))*2+'" disabled>Mucho - ₡'+(parseInt(element.price,10))*2+'</label></div></div></li>');
+    });
+  }
+});
+>>>>>>> Stashed changes

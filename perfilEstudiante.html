@@ -13,6 +13,7 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="css/perfil.css">
+  <link rel=”stylesheet” href=”css/popup.css”>
 
 </head>
 
@@ -66,7 +67,15 @@
       </div>
 
       <div class="botones center-block">
-        <button type="submit" id="buscarProyecto"class = "btn btn-danger" name="buscarProyecto" role = "button">BuscarProyecto</button>
+        <button type="button" value="Pop up en Zoom In" data-type=”zoomin” id="buscarProyecto" class = "btn btn-danger" name="buscarProyecto">BuscarProyecto</button>
+          <div class=”overlay-container”>
+            <div class="window-container zoomin">
+            <h3>Versión en Zoom in</h3>
+            Texto de la ventana emergente<br/>
+              <br/>
+              <span>Cerrar</span>
+            </div>
+          </div>
         <button type="submit" id="verCursos"class = "btn btn-danger" name="verCursos" role = "button">Ver Cursos Disponibles</button>
         <button type="submit" id="proponerProyecto"class = "btn btn-danger" name="proponerProyecto" role = "button">Proponer Proyecto</button>
       </div>
@@ -159,6 +168,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src="js/perfil.js"></script>
   <script src="js/bootstrap-filestyle.min.js"> </script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src=”jquery-1.7.1.min.js”%3E%3C/script%3E'))</script>
+  <script type="text/javascript" src="js/popup.js"></script>
 
 </body>
 </html>
