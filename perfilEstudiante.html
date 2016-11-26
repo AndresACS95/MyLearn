@@ -13,7 +13,6 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="css/perfil.css">
-  <link rel=”stylesheet” href=”css/popup.css”>
 
 </head>
 
@@ -67,17 +66,123 @@
       </div>
 
       <div class="botones center-block">
-        <button type="button" value="Pop up en Zoom In" data-type=”zoomin” id="buscarProyecto" class = "btn btn-danger" name="buscarProyecto">BuscarProyecto</button>
-          <div class=”overlay-container”>
-            <div class="window-container zoomin">
-            <h3>Versión en Zoom in</h3>
-            Texto de la ventana emergente<br/>
-              <br/>
-              <span>Cerrar</span>
-            </div>
-          </div>
-        <button type="submit" id="verCursos"class = "btn btn-danger" name="verCursos" role = "button">Ver Cursos Disponibles</button>
-        <button type="submit" id="proponerProyecto"class = "btn btn-danger" name="proponerProyecto" role = "button">Proponer Proyecto</button>
+
+        <a href="#buscarProyecto" class="btn btn-danger" data-toggle="modal">Buscar Proyecto</a>
+
+        <div class="modal fade" tabindex="-1" role="dialog" id="buscarProyecto">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Busqueda de Proyectos</h4>
+              </div>
+              <div class="modal-body">
+
+                <div class="row busqueda">
+                  <div class="col-md-4" id="busqueda">
+                    <div id="custom-search-input">
+                      <div class="input-group col-md-12">
+                        <input type="text" class="form-control input-lg" placeholder="Buscar" />
+                        <span class="input-group-btn">
+                           <button class="btn btn-info btn-lg" type="button">
+                               <i class="glyphicon glyphicon-search"></i>
+                           </button>
+                       </span>
+                     </div>
+                   </div></br >
+                    <div class="well" style="max-height: 300px;overflow: auto;">
+                    	Lista de Tecnologías:<ul class="list-group checked-list-box">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item" data-checked="true">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Morbi leo risus</li>
+                        <li class="list-group-item">Porta ac consectetur ac</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Morbi leo risus</li>
+                        <li class="list-group-item">Porta ac consectetur ac</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="col-md-8" id="resultados">
+                    <div class="row resultados">
+                      <h3>Resultados</h3>
+                      <div class="well" style="max-height: 500px;overflow: auto;">
+                        <ul class="list-group">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <li class="list-group-item">Cras justo odio</li>
+                              <li class="list-group-item" data-checked="true">Dapibus ac facilisis in</li>
+                              <li class="list-group-item">Morbi leo risus</li>
+                              <li class="list-group-item">Porta ac consectetur ac</li>
+                              <li class="list-group-item">Vestibulum at eros</li>
+                              <li class="list-group-item">Cras justo odio</li>
+                            </div>
+                            <div class="col-md-6">
+                              <li class="list-group-item">Dapibus ac facilisis in</li>
+                              <li class="list-group-item">Morbi leo risus</li>
+                              <li class="list-group-item">Porta ac consectetur ac</li>
+                              <li class="list-group-item">Vestibulum at eros</li>
+                            </div>
+                          </div>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+        </div>
+
+        <a href="#buscarCurso" class="btn btn-danger" data-toggle="modal">Ver Cursos Disponibles</a>
+
+        <div class="modal fade" tabindex="-1" role="dialog" id="buscarCurso">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Cursos Disponibles</h4>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-4" id="busqueda">
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+        <a href="#proponerProyecto" class="btn btn-danger" data-toggle="modal">Proponer Proyecto</a>
+
+        <div class="modal fade" tabindex="-1" role="dialog" id="proponerProyecto">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Formulario de Propuesta de Proyecto</h4>
+              </div>
+              <div class="modal-body">
+                <p>One fine body&hellip;</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
       </div>
     </div>
 
@@ -112,7 +217,7 @@
       <div class="col-md-3" id="cursos">
         <h3>Mis Cursos</h3></br >
         <div class="well" style="max-height: 500px;overflow: auto;">
-          <ul class="list-group checked-list-box">
+          <ul class="list-group">
             <li class="list-group-item">Cras justo odio</li>
             <li class="list-group-item" data-checked="true">Dapibus ac facilisis in</li>
             <li class="list-group-item">Morbi leo risus</li>
@@ -130,7 +235,7 @@
       <div class="col-md-3" id="proyectos">
         <h3>Mis Proyectos Remunerados</h3>
         <div class="well" style="max-height: 500px;overflow: auto;">
-          <ul class="list-group checked-list-box">
+          <ul class="list-group">
             <li class="list-group-item">Cras justo odio</li>
             <li class="list-group-item" data-checked="true">Dapibus ac facilisis in</li>
             <li class="list-group-item">Morbi leo risus</li>
@@ -148,7 +253,7 @@
       <div class="col-md-3" id="notificaciones">
         <h3>Notificaciones</h3></br >
         <div class="well" style="max-height: 500px;overflow: auto;">
-          <ul class="list-group checked-list-box">
+          <ul class="list-group">
             <li class="list-group-item">Cras justo odio</li>
             <li class="list-group-item" data-checked="true">Dapibus ac facilisis in</li>
             <li class="list-group-item">Morbi leo risus</li>
@@ -168,8 +273,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src="js/perfil.js"></script>
   <script src="js/bootstrap-filestyle.min.js"> </script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src=”jquery-1.7.1.min.js”%3E%3C/script%3E'))</script>
-  <script type="text/javascript" src="js/popup.js"></script>
+  <script type="text/javascript" src="js/register.js"></script>
+
 
 </body>
 </html>
